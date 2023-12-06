@@ -6,7 +6,7 @@
 - [ ] Introducing and implementation of Kafka
       
 
-## Configuring a spring-boot application as producer
+## Configuring kafka to a spring-boot application
 1) Run Zookeeper on your local cmd 
 ~~~ 
 > bin\windows\zookeeper-server-start.bat etc\kafka\zookeeper.properties
@@ -20,3 +20,4 @@ bin\windows\kafka-server-start.bat etc\kafka\server.properties
 >bin\windows\kafka-topics.bat --create --topic mytopic --partitions 1 --bootstrap-server localhost:9092
 ~~~
 4) Start your spring-boot application and hit the /send endpoint using postman.
+5) The message will automatically be consumed by the controller method where @KafkaListener is used at method level

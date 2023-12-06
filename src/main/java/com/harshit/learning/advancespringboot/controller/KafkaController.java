@@ -22,8 +22,6 @@ public class KafkaController {
         kafkaTemplate.send("my-topic", message);
         return ResponseEntity.ok("Message sent: " + message);
     }
-    @KafkaHandler
-
 
     @KafkaListener(topics = "my-topic")
     public void consumeMessage(String message){
