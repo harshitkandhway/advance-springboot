@@ -1,13 +1,15 @@
 package com.harshit.learning.advancespringboot.domain;
 
-import javax.persistence.*;
+
+import jakarta.persistence.*;
+
 import java.util.UUID;
 
 @Entity
 @Table(name = "laptop")
 public class Laptop {
 
-    @Id
+    @jakarta.persistence.Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID Id;
 
